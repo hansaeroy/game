@@ -1,0 +1,198 @@
+.game.gold {
+  background: url("/src/img/gold.png");
+  background-size: contain;
+}
+.game.silver {
+  background: url("/src/img/silver.png");
+  background-size: contain;
+  color: #4e4e4e;
+}
+.game.bronze {
+  background: url("/src/img/bronze.png");
+  background-size: contain;
+  color: #691500;
+}
+
+.games {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 50px;
+  padding-top: 70px;
+  width: 95%;
+  font-family: "Bebas Neue", cursive;
+}
+
+.game {
+  position: relative;
+  width: 250px;
+  height: 398px;
+  margin: 0 20px 50px 0;
+  font-weight: 300;
+  padding: 20px;
+  color: #5b401d;
+}
+
+.game img {
+  position: relative;
+  top: 10px;
+  left: 40px;
+  max-width: 180px;
+  max-height: 180px;
+  width: 100%;
+}
+
+.game__data {
+  position: relative;
+  top: -18px;
+  font-weight: 300;
+}
+.game__total {
+  position: absolute;
+  top: -130px;
+  left: 4px;
+  font-size: 40px;
+  font-weight: 700;
+}
+.game__position {
+  position: absolute;
+  top: -90px;
+  left: 7px;
+  font-size: 24px;
+}
+
+.game__name {
+  position: relative;
+  top: 28px;
+  margin: 0px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.game__atk p,
+.game__tos p,
+.game__dep p {
+  position: relative;
+  display: inline-block;
+  top: 25px;
+  left: 2px;
+  margin: 0 0 0px 10px;
+  width: 45%;
+  font-family: "Fjalla One" sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+.game__atk span,
+.game__tos span,
+.game__dep span {
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-left: 2px;
+}
+.game__price {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 22px;
+  top: 22px;
+  position: relative;
+}
+.game__price span {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1280px) {
+  #header {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #header {
+    padding: 4em 2em 2em 2em;
+  }
+
+  #header.alt h1 {
+    font-size: 2.5em;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #header.alt p {
+    padding: 0;
+  }
+
+  #header.alt .inner {
+    max-width: 20em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .games {
+    position: relative;
+    padding: 10px;
+    padding-top: 50px;
+    width: 95%;
+  }
+  .game {
+    position: relative;
+    display: inline;
+    margin: 0;
+    width: 155px;
+    height: 246px;
+    margin-bottom: 20px;
+  }
+
+  .game img {
+    top: -4px;
+    left: 75px;
+    transform: translateX(-50%);
+    max-height: 120px;
+    margin: 0;
+  }
+  .game__data {
+    top: -28px;
+  }
+  .game__total {
+    top: -80px;
+    left: 0px;
+    font-size: 20px;
+  }
+  .game__position {
+    top: -59px;
+    left: -1px;
+    font-size: 16px;
+  }
+
+  .game__name {
+    top: 20px;
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .game__atk p,
+  .game__tos p,
+  .game__dep p {
+    display: inline-block;
+    position: relative;
+    top: 22px;
+    margin: -5px 0 0 02px;
+    width: 48%;
+    font-size: 15px;
+  }
+  .game__atk span,
+  .game__tos span,
+  .game__dep span {
+    font-size: 16px;
+  }
+
+  .game__price {
+    font-size: 14px;
+    top: 19px;
+    margin: 0px;
+  }
+}

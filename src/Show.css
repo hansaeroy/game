@@ -1,0 +1,62 @@
+.wrap {
+  background-image: url("./img/bg.png");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* IE에서 화살표 제거 */
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  position: relative;
+  left: 7%;
+  top: 30px;
+  box-shadow: 0px 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-shadow: 0px 1px 0px #3d768a;
+  z-index: 1;
+}
+select option {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+select:hover {
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
+}
+
+@media screen and (max-width: 480px) {
+  select {
+    top: 25px;
+    right: 10px;
+    width: 120px;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
