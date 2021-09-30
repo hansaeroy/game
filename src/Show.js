@@ -12,6 +12,10 @@ function Show() {
       const types = {
         name: "name",
         price: "price",
+        atk: "atk",
+        tos: "tos",
+        dep: "dep",
+        total: "total",
       };
       const sortProperty = types[type];
       const sorted = [...data].sort(
@@ -30,6 +34,10 @@ function Show() {
         <select onChange={e => setSortType(e.target.value)}>
           <option value="name">이름</option>
           <option value="price">누적 금액</option>
+          <option value="atk">공격승률</option>
+          <option value="tos">토스승률</option>
+          <option value="dep">수비승률</option>
+          <option value="total">전체승률</option>
         </select>
       </div>
       <section className="container">
@@ -42,11 +50,11 @@ function Show() {
               name={person.name}
               price={person.price}
               atk={person.atk}
+              tos={person.tos}
+              dep={person.dep}
               atkRound={person.atkRound}
               tosRound={person.tosRound}
               depRound={person.depRound}
-              tos={person.tos}
-              dep={person.dep}
             />
           ))}
         </div>

@@ -26,6 +26,7 @@
 
 .game {
   position: relative;
+  top: 40px;
   width: 250px;
   height: 398px;
   margin: 0 20px 50px 0;
@@ -72,39 +73,29 @@
   letter-spacing: 1px;
 }
 
-.game__atk p,
-.game__tos p,
-.game__dep p {
+.game__score P {
   position: relative;
   display: inline-block;
   top: 25px;
   left: 2px;
   margin: 0 0 0px 10px;
   width: 45%;
-  font-family: "Fjalla One" sans-serif;
   font-weight: 500;
   font-size: 22px;
 }
-.game__atk span,
-.game__tos span,
-.game__dep span {
+
+.game__score span {
   font-weight: 900;
   font-size: 24px;
   letter-spacing: 1px;
-  margin-left: 2px;
+  margin-left: 10px;
 }
-.game__price {
-  margin-top: 0px;
-  text-align: center;
-  font-size: 22px;
-  top: 22px;
-  position: relative;
+.letter {
+  letter-spacing: -1px;
 }
-.game__price span {
-  font-family: "Bebas Neue", cursive;
-  font-weight: 900;
+#letter {
+  letter-spacing: -0.5px;
 }
-
 @media screen and (max-width: 1280px) {
   #header {
     background-attachment: scroll;
@@ -139,8 +130,6 @@
     width: 95%;
   }
   .game {
-    position: relative;
-    display: inline;
     margin: 0;
     width: 155px;
     height: 246px;
@@ -169,30 +158,24 @@
   }
 
   .game__name {
-    top: 20px;
+    top: 22px;
     font-size: 16px;
     margin-bottom: 0px;
   }
 
-  .game__atk p,
-  .game__tos p,
-  .game__dep p {
-    display: inline-block;
-    position: relative;
-    top: 22px;
-    margin: -5px 0 0 02px;
+  .game__score P {
+    top: 26px;
+    margin: -5px 0 0 2px;
     width: 48%;
     font-size: 15px;
   }
-  .game__atk span,
-  .game__tos span,
-  .game__dep span {
+
+  .game__score span {
+    margin-left: 5px;
     font-size: 16px;
   }
 
-  .game__price {
-    font-size: 14px;
-    top: 19px;
-    margin: 0px;
+  .letter {
+    letter-spacing: -0.5px;
   }
 }

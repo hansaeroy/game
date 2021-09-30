@@ -19,22 +19,29 @@ function Game({
   const depPoint = Math.floor(dep.toFixed(2) * 100);
   const pricePoint = price / 10000;
   const totalPoint = Math.floor(total.toFixed(2) * 100);
+  const gameRound = atkRound + tosRound + depRound;
+  const gameCount = Math.max(atkRound, tosRound, depRound);
 
   let position;
-  if (atkRound + tosRound + depRound === 0) {
+  let positionPoint;
+  if (gameRound === 0) {
     position = "NON";
-  } else if (Math.max(atkRound, tosRound, depRound) === atkRound) {
+    positionPoint = "0";
+  } else if (gameCount === atkRound) {
     position = "ATT";
-  } else if (Math.max(atkRound, tosRound, depRound) === tosRound) {
+    positionPoint = atkPoint;
+  } else if (gameCount === tosRound) {
     position = "TOS";
-  } else if (Math.max(atkRound, tosRound, depRound) === depRound) {
+    positionPoint = tosPoint;
+  } else if (gameCount === depRound) {
     position = "DEP";
+    positionPoint = depPoint;
   }
 
   let iconClass;
-  if (totalPoint >= 55 && atkRound + tosRound + depRound >= 10) {
+  if (positionPoint >= 60 && gameRound >= 10) {
     iconClass = "game gold";
-  } else if (totalPoint < 55 && totalPoint >= 30) {
+  } else if (positionPoint < 60 && positionPoint >= 40) {
     iconClass = " game silver";
   } else {
     iconClass = " game bronze";
@@ -44,36 +51,29 @@ function Game({
     <div className={iconClass}>
       <img src={imgUrl} alt={name} />
       <div className="game__data">
-        <div className="game__total">{totalPoint}</div>
+        <div className="game__total">{positionPoint}</div>
         <div className="game__position">{position}</div>
         <h4 className="game__name">{name}</h4>
-        <div className="game__atk">
+        <div className="game__score">
           <p>
             ATT <span>{atkPoint}</span>
           </p>
-          <p>
-            GAME <span>{atkRound}</span>
+          <p className="letter">
+            GAME <span>{gameRound}</span>
           </p>
-        </div>
-        <div className="game__tos">
           <p>
             TOS <span>{tosPoint}</span>
           </p>
           <p>
-            GAME <span>{tosRound}</span>
+            RATE <span>{totalPoint}</span>
           </p>
-        </div>
-        <div className="game__dep">
           <p>
             DEP <span>{depPoint}</span>
           </p>
           <p>
-            GAME <span>{depRound}</span>
+            COST <span id="letter">{pricePoint}</span>
           </p>
         </div>
-        <p className="game__price">
-          COST <span>{pricePoint}</span>{" "}
-        </p>
       </div>
     </div>
   );

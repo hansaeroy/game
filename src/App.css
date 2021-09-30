@@ -150,8 +150,8 @@ body {
   opacity: 1;
   -webkit-transform-origin: 100% 0%;
   transform-origin: 100% 0%;
-  -webkit-animation: loader3 4s ease-in-out infinite;
-  animation: loader3 4s ease-in-out infinite;
+  -webkit-animation: loader3 3s ease-in-out infinite;
+  animation: loader3 3s ease-in-out infinite;
 }
 
 @-webkit-keyframes loader3 {
@@ -190,15 +190,4 @@ body {
   }
 }
 
-@media screen and (max-width: 736px) {
-}
 
-@media screen and (max-width: 480px) {
-  select {
-    top: 25px;
-    right: 10px;
-    width: 120px;
-    padding: 10px;
-    font-size: 16px;
-  }
-}
